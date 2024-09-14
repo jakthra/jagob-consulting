@@ -1,8 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient'
-import * as reactSpring from '@react-spring/three'
-import * as drei from '@react-three/drei'
-import * as fiber from '@react-three/fiber'
 
 export const meta: MetaFunction = () => {
   return [
