@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: [
-          '"Inter"',
+          '"Lora"',
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -18,5 +18,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 } satisfies Config;
