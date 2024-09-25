@@ -4,7 +4,19 @@ export default {
 	darkMode: ["class"],
 	content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
 	theme: {
+
 		extend: {
+			fontSize: {
+				"massive": ['15rem', {
+					lineHeight: '12rem',
+					letterSpacing: '0.01em',
+					fontWeight: '500',
+				}],
+				"tiny": ['0.5rem', {
+					lineHeight: '0.75rem',
+					fontWeight: '300',
+				}]
+			},
 			fontFamily: {
 				sans: [
 					'"Lora"',
@@ -68,6 +80,7 @@ export default {
 	},
 	plugins: [
 		require('daisyui'),
-		require("tailwindcss-animate")
+		require("tailwindcss-animate"),
+		require('tailwindcss-bg-patterns'),
 	],
 } satisfies Config;
