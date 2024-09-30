@@ -30,6 +30,10 @@ export default function Index() {
   // This will always return a result. The item is returned here rather than in the loader - since the loader creates a json-object returned, and the data structure contains reactnodes
   const data = WorkItems.find((item) => item.id == workId) as WorkItem;
 
+  if (data.articleComponent) {
+    return data.articleComponent(data);
+  }
+
   return (
     <div className="flex flex-col min-h-screen text-slate-800">
       <main>
@@ -53,7 +57,6 @@ export default function Index() {
               </span>
             </span>
             <p>{data.shortDescription}</p>
-            <p>{data.longDescription}</p>
             <p>{data.affiliation}</p>
           </div>
         </section>

@@ -7,7 +7,7 @@ export default {
 
 		extend: {
 			fontSize: {
-				"massive": ['15rem', {
+				"massive": ['12rem', {
 					lineHeight: '12rem',
 					letterSpacing: '0.01em',
 					fontWeight: '500',

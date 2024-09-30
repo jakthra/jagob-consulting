@@ -89,7 +89,7 @@ export default function Index() {
             <ChevronDown className="h-8 w-8 text-white" />
           </div>
         </section>
-        <section id="work" className=" h-[100vh] pt-12 ">
+        <section id="work" className="h-[100vh] pt-12 ">
           <div className="flex flex-col px-4 md:px-6 space-y-4">
             <h2 className="text-8xl lg:text-massive">WORK</h2>
             <div className="p-10 xl:p-16 flex flex-grow items-center justify-center">

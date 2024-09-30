@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <a className="text-sm font-medium " href="/#work">
               Work
             </a>
-            <a className="text-sm font-medium" href="/#work">
+            <a className="text-sm font-medium" href="/#help">
               Help
             </a>
             <a

@@ -5,12 +5,16 @@ import {
   IconBrandReact,
   IconBrandTypescript,
 } from "@tabler/icons-react";
+import { AI4xrayArticle } from "~/components/articles/aiforxray";
+import { BeanieGenieArticle } from "~/components/articles/beaniegenie";
 
 import {
   DagsterIcon,
   PytorchLogo,
   DBTIcon,
   DuckDBIcon,
+  DrizzleLogo,
+  PostgresLogo,
 } from "~/components/ui/logos";
 
 import { WorkItem, WorkStatus } from "~/types";
@@ -22,13 +26,20 @@ export const WorkItems: WorkItem[] = [
     affiliation: null,
     shortDescription:
       "Specialty coffee can be hard to navigate and explore. BeanieGenie is designed to help users navigate complex flavor profiles and manage orders. It aims to simplify choosing the right coffee by identifying flavor patterns and roasters that fit your taste buds while enabling you to make orders in time to maintain freshness, preventing gaps in coffee availability.",
+    articleComponent: (WorkItemProps) => (
+      <BeanieGenieArticle {...WorkItemProps} />
+    ),
     link: "/work/beanie-genie",
     status: WorkStatus.Active,
     technologies: [
       { icon: <IconBrandNextjs />, name: "NextJs" },
       { icon: <IconBrandReact />, name: "React" },
     ],
-    extraTechnologies: [{ icon: <IconBrandTypescript />, name: "Typescript" }],
+    extraTechnologies: [
+      { icon: <IconBrandTypescript />, name: "Typescript" },
+      { icon: <DrizzleLogo width="82" height="22" />, name: "Drizzle ORM" },
+      { icon: <PostgresLogo width="22" height="22" />, name: "Postgres" },
+    ],
   },
   {
     id: "ml-cookie-cutter",
@@ -52,8 +63,7 @@ export const WorkItems: WorkItem[] = [
     shortDescription:
       "The AI4XRAY project focused on providing second opinions to clinicians studying x-rays, benefiting junior doctors and resource-limited clinics. Key engineering efforts included ingesting and extracting 1.5M DICOM images, creating a custom annotation suite, and managing model training, tracking, and deployment.",
     link: "/work/ai-for-xray",
-    longDescription:
-      "The engineering efforts lead consisted of: \n 1. Raw data ingestion and extraction of 1.5M DICOM images (Go, Postgres)\n 2. Custom annotation suite with complex label hierachy (React, FastAPI, Postgres)\n 3. Model training, tracking and deployment (Pytorch, Mlflow, Dagster, BentoML)",
+    articleComponent: (WorkItemProps) => <AI4xrayArticle {...WorkItemProps} />,
     status: WorkStatus.Archived,
     technologies: [
       { icon: <IconBrandPython />, name: "Python" },
