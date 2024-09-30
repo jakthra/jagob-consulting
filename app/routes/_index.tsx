@@ -50,6 +50,7 @@ import {
 } from "@tabler/icons-react";
 import { WorkItems } from "~/lib/workItems";
 import { TechnologyIcon } from "~/components/ui/technologyicon";
+import { WorkStatus } from "~/types";
 export const meta: MetaFunction = () => {
   return [
     { title: "BeanieGenie consulting" },
@@ -115,10 +116,15 @@ export default function Index() {
                                     {content.title}
                                   </span>
                                 </div>
-                                <Badge className="text-tiny">
-                                  <div className="text-white">
-                                    {content.status}
-                                  </div>
+                                <Badge
+                                  className="text-tiny text-slate-300"
+                                  variant={
+                                    content.status == WorkStatus.Active
+                                      ? "default"
+                                      : "outline"
+                                  }
+                                >
+                                  <div>{content.status}</div>
                                 </Badge>
                               </div>
                               <CardDescription>

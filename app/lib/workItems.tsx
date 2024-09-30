@@ -46,7 +46,7 @@ export const WorkItems: WorkItem[] = [
     title: "ML Cookie cutter",
     affiliation: null,
     shortDescription:
-      "This GitHub repository provides tools for managing machine learning (ML) projects, covering data ingestion, model training, and performance monitoring. It follows an ELT approach to process and transform raw data. The repository includes a built-in command-line interface (CLI) for managing data, running experiments, and handling project builds..",
+      "This GitHub repository provides tools for managing machine learning (ML) projects, covering data ingestion, model training, and performance monitoring. It follows an ELT approach to process and transform raw data. The repository includes a built-in command-line interface (CLI) for managing data, running experiments, and handling project builds.",
     link: "https://github.com/jakthra/ml-cookie-cutter",
     status: WorkStatus.Active,
     technologies: [{ icon: <IconBrandPython />, name: "Python" }],
