@@ -38,14 +38,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <a href="/">
             <div className="flex items-center justify-center">
               <BrainCircuitIcon />
-              <span className="ml-2 text-lg ">JAKOB THRANE</span>
+              <span className="ml-2 text-md xl:text-lg ">JAKOB THRANE</span>
             </div>
           </a>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <a className="text-sm font-medium " href="/#work">
+          <nav className="ml-auto flex gap-2 md:gap-6">
+            <a className="text-xs md:text-sm font-medium " href="/#work">
               Work
             </a>
-            <a className="text-sm font-medium" href="/#help">
+            <a className="text-xs md:text-sm font-medium" href="/#help">
               Help
             </a>
             <a

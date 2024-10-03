@@ -51,7 +51,9 @@ export function AI4xrayArticle(props: WorkItem) {
             <div>
               <div className="flex flex-row justify-between align-top">
                 <div className="flex flex-row space-x-6">
-                  <h1 className="tracking-tighter text-8xl">{props.title}</h1>
+                  <h1 className="tracking-tighter text-2xl md:text-8xl">
+                    {props.title}
+                  </h1>
                 </div>
                 <span>
                   <Badge className="text-tiny">
