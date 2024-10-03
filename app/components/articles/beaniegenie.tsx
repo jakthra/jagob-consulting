@@ -11,16 +11,19 @@ export function BeanieGenieArticle(props: WorkItem) {
         <section className="mt-12">
           <div className="container p-24 flex flex-col space-y-8">
             <div>
+              <img
+                alt="BeanieGenie logo"
+                height={"auto"}
+                width={"100px"}
+                src="/logo.svg"
+                className="invert mb-8"
+              />
               <div className="flex flex-row justify-between align-top">
-                <div className="flex flex-row space-x-6">
-                  <h1 className="tracking-tighter text-8xl">{props.title}</h1>
-                  <img
-                    alt="BeanieGenie logo"
-                    height={"auto"}
-                    width={"70px"}
-                    src="/logo.svg"
-                    className="invert"
-                  />
+                <div className="flex flex-col md:flex-row space-x-6 space-y-2">
+                  <h1 className="tracking-tighter text-2xl md:text-8xl">
+                    {props.title}
+                  </h1>
+                  <div className="items-center"></div>
                 </div>
                 <span>
                   <Badge className="text-tiny">
@@ -29,7 +32,7 @@ export function BeanieGenieArticle(props: WorkItem) {
                 </span>
               </div>
 
-              <span className="text-muted-foreground">27/09/2024</span>
+              <span className="text-muted-foreground text-xs">27/09/2024</span>
             </div>
             <span className="flex flex-col justify-between">
               <span className="flex flex-row space-x-2">
