@@ -9,7 +9,7 @@ export function BeanieGenieArticle(props: WorkItem) {
     <div className="flex flex-col min-h-screen text-slate-800">
       <main>
         <section className="mt-12">
-          <div className="container p-24 flex flex-col space-y-8">
+          <div className="container p-8 md:p-24 flex flex-col space-y-8">
             <div>
               <img
                 alt="BeanieGenie logo"
