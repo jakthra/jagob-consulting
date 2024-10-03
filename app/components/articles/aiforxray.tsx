@@ -47,7 +47,7 @@ export function AI4xrayArticle(props: WorkItem) {
     <div className="flex flex-col min-h-screen text-slate-800">
       <main>
         <section className="mt-12">
-          <div className="container p-24 flex flex-col space-y-8">
+          <div className="container p-8 md:p-24 flex flex-col space-y-8">
             <div>
               <div className="flex flex-row justify-between align-top">
                 <div className="flex flex-row space-x-6">
@@ -173,13 +173,6 @@ export function AI4xrayArticle(props: WorkItem) {
 
             <section className="container flex flex-col space-y-8">
               <h2 className="text-3xl font-bold">The stack</h2>
-              <p>
-                I chose Drizzle as the data migration tool for two reasons: its
-                growing popularity and the fact that I hadn’t used it before.
-                Since this project is expected to undergo frequent changes, a
-                migration tool is essential for managing schema and model
-                updates in the database.
-              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                 {props.technologies
                   .concat(props.extraTechnologies)
@@ -188,7 +181,7 @@ export function AI4xrayArticle(props: WorkItem) {
                       return <></>;
                     }
                     return (
-                      <div className="flex flex-col space-y-2">
+                      <div className="flex flex-col space-y-2" key={index}>
                         <div className="flex flex-row space-x-4" key={index}>
                           <TechnologyIcon {...tech} />
                           <p>{tech.name}</p>

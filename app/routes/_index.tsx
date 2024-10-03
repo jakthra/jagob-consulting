@@ -83,11 +83,11 @@ export default function Index() {
         </section>
         <section
           id="work"
-          className="min-h-[700px] md:min-h-[1000px] max-h-[90vh] pt-12 "
+          className="min-h-[700px] md:min-h-[800px] max-h-[90vh] pt-12 "
         >
-          <div className="flex flex-col px-4 md:px-6 space-y-4">
+          <div className="flex flex-col px-4 md:px-6 space-y-2">
             <h2 className="text-4xl md:text-4xl lg:text-massive">WORK</h2>
-            <div className="p-10 xl:p-16 flex flex-grow items-center justify-center">
+            <div className="p-1 xl:p-2 flex flex-grow items-center justify-center">
               <Carousel
                 opts={{
                   align: "start",
@@ -101,7 +101,7 @@ export default function Index() {
                       className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/3"
                     >
                       <div className="p-1">
-                        <Card className="h-[30rem] xl:h-[32rem] flex flex-col justify-between">
+                        <Card className="h-[28rem] xl:h-[26rem] flex flex-col justify-between">
                           <div>
                             <CardHeader>
                               <div className="flex flex-row justify-between items-center">
