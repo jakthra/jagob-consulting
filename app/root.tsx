@@ -26,7 +26,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" class="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,8 +42,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </a>
           <nav className="ml-auto flex gap-2 md:gap-6">
-            <a className="text-xs md:text-sm font-medium " href="/#work">
-              Work
+            <a className="text-xs md:text-sm font-medium " href="/#projects">
+              Projects
             </a>
             <a className="text-xs md:text-sm font-medium" href="/#help">
               Help
@@ -66,9 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <ScrollRestoration />
         <Scripts />
         <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-          <p className="text-xs text-gray-600">
-            © 2023 Jakob Thrane. All rights reserved.
-          </p>
+          <p className="text-xs">© 2023 Jakob Thrane. All rights reserved.</p>
           <nav className="sm:ml-auto flex gap-4 sm:gap-6">
             {/* <Link className="text-xs hover:underline underline-offset-4" href="#"> */}
             {/* Terms of Service */}

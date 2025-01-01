@@ -2,6 +2,7 @@ import { Badge } from "~/components/ui/badge";
 import { TechnologyIcon } from "~/components/ui/technologyicon";
 import { WorkItem } from "~/types";
 import { Button } from "../ui/button";
+import StatusBadge from "../ui/StatusBadge";
 
 const technologyStack = {
   golang: {
@@ -44,7 +45,7 @@ const technologyStack = {
 
 export function AI4xrayArticle(props: WorkItem) {
   return (
-    <div className="flex flex-col min-h-screen text-slate-800">
+    <div className="flex flex-col min-h-screen">
       <main>
         <section className="mt-12">
           <div className="container p-8 md:p-24 flex flex-col space-y-8">
@@ -56,9 +57,7 @@ export function AI4xrayArticle(props: WorkItem) {
                   </h1>
                 </div>
                 <span>
-                  <Badge className="text-tiny">
-                    <div className="text-white">{props.status}</div>
-                  </Badge>
+                  <StatusBadge status={props.status} />
                 </span>
               </div>
 
