@@ -11,7 +11,9 @@ export function TechnologyIcon(props: Technology) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <div className="grayscale hover:grayscale-0">{props.icon}</div>
+          <div className="grayscale hover:grayscale-0 text-accent-foreground">
+            {props.icon}
+          </div>
         </TooltipTrigger>
         <TooltipContent side="bottom">
           <span>

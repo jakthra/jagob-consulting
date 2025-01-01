@@ -7,8 +7,8 @@ export default {
 
 		extend: {
 			fontSize: {
-				"massive": ['12rem', {
-					lineHeight: '12rem',
+				"massive": ['10rem', {
+					lineHeight: '10rem',
 					letterSpacing: '0.01em',
 					fontWeight: '500',
 				}],
@@ -35,7 +35,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			colors: {
-				background: 'hsl(var(--background))',
+				background: 'rgb(14 18 25)',
 				foreground: 'hsl(var(--foreground))',
 				card: {
 					DEFAULT: 'hsl(var(--card))',

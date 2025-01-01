@@ -51,6 +51,7 @@ import {
 import { WorkItems } from "~/lib/workItems";
 import { TechnologyIcon } from "~/components/ui/technologyicon";
 import { WorkStatus } from "~/types";
+import StatusBadge from "~/components/ui/StatusBadge";
 export const meta: MetaFunction = () => {
   return [
     { title: "BeanieGenie consulting" },
@@ -60,33 +61,16 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <main className="flex-1">
-        <section className="h-2/5 flex flex-col justify-end bg-gradient-to-r from-orange-300 to-slate-300 relative overflow-hidden items-end">
-          <div className="container relative z-10 h-[70vh] flex flex-col justify-center">
-            <div className="flex flex-col space-y-4 ">
-              <div className="space-y-2 ml-2">
-                <div className="flex">
-                  <h1 className="tracking-tighter text-4xl md:text-4xl lg:text-massive">
-                    THRANE
-                  </h1>
-                </div>
-                <p className="text-md md:text-xl text-wrap">
-                  A portofolio for engineering projects and research
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <ChevronDown className="h-8 w-8 text-white" />
-          </div>
-        </section>
         <section
           id="work"
-          className="min-h-[700px] md:min-h-[800px] max-h-[90vh] pt-12 "
+          className="min-h-[700px] md:min-h-[800px] max-h-[90vh] pt-24 "
         >
           <div className="flex flex-col px-4 md:px-6 space-y-2">
-            <h2 className="text-4xl md:text-4xl lg:text-massive">WORK</h2>
+            <h2 className="text-4xl md:text-4xl lg:text-massive noise">
+              PROJECTS
+            </h2>
             <div className="p-1 xl:p-2 flex flex-grow items-center justify-center">
               <Carousel
                 opts={{
@@ -101,7 +85,7 @@ export default function Index() {
                       className="sm:basis-1/2 lg:basis-1/3 xl:basis-1/3"
                     >
                       <div className="p-1">
-                        <Card className="h-[28rem] xl:h-[26rem] flex flex-col justify-between">
+                        <Card className="h-[28rem] xl:h-[26rem] flex flex-col justify-between text-foreground">
                           <div>
                             <CardHeader>
                               <div className="flex flex-row justify-between items-center">
@@ -110,16 +94,8 @@ export default function Index() {
                                     {content.title}
                                   </span>
                                 </div>
-                                <Badge
-                                  className="text-tiny text-slate-300"
-                                  variant={
-                                    content.status == WorkStatus.Active
-                                      ? "default"
-                                      : "outline"
-                                  }
-                                >
-                                  <div>{content.status}</div>
-                                </Badge>
+
+                                <StatusBadge status={content.status} />
                               </div>
                               <CardDescription>
                                 <span className="flex flex-row justify-between ">
@@ -144,7 +120,7 @@ export default function Index() {
                             </CardContent>
                           </div>
                           <CardFooter className="flex justify-center">
-                            <Button asChild className="w-full">
+                            <Button asChild className="w-full bg-primary">
                               <a href={content.link}>Read more</a>
                             </Button>
                           </CardFooter>
@@ -159,10 +135,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section
-          id="help"
-          className="flex flex-col h-fit bg-orange-200 pt-12 pb-8 "
-        >
+        <section id="help" className="flex flex-col h-fit pt-12 pb-8 ">
           <div className="container px-4 md:px-6 flex flex-col xl:flex-row space-y-12 xl:space-x-12">
             <div className="flex flex-col space-y-2 text-wrap">
               <h2 className=" text-4xl md:text-4xl lg:text-massive">HELP</h2>
@@ -192,7 +165,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="container xl:w-1/2 space-y-4 flex flex-col xl:h-full xl:justify-end ">
+            <div className="container space-y-4 flex flex-col xl:h-full xl:justify-end ">
               <p>
                 As a seasoned ML Engineer with a strong foundation in data
                 engineering and software development, I offer end-to-end

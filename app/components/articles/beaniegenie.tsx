@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 
 export function BeanieGenieArticle(props: WorkItem) {
   return (
-    <div className="flex flex-col min-h-screen text-slate-800">
+    <div className="flex flex-col min-h-screen">
       <main>
         <section className="mt-12">
           <div className="container p-8 md:p-24 flex flex-col space-y-8">
@@ -16,7 +16,7 @@ export function BeanieGenieArticle(props: WorkItem) {
                 height={"auto"}
                 width={"100px"}
                 src="/logo.svg"
-                className="invert mb-8"
+                className="invert dark:invert-0 mb-8"
               />
               <div className="flex flex-row justify-between align-top">
                 <div className="flex flex-col md:flex-row space-x-6 space-y-2">
@@ -27,7 +27,7 @@ export function BeanieGenieArticle(props: WorkItem) {
                 </div>
                 <span>
                   <Badge className="text-tiny">
-                    <div className="text-white">{props.status}</div>
+                    <div className="text-accent">{props.status}</div>
                   </Badge>
                 </span>
               </div>
